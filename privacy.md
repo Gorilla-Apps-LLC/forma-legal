@@ -69,7 +69,11 @@ syncs **two ways**:
 
 - **Reads into Forma**: body weight, body-fat percentage, active and resting energy, steps,
   resting heart rate, blood pressure, dietary energy and macros, and workouts recorded by other
-  apps or devices (for example a watch workout or an exercise-bike ride).
+  apps or devices (for example a watch workout or an exercise-bike ride) — including the name of
+  the app or device that recorded each workout and, for those workouts, the heart-rate samples and
+  cycling power recorded during them, which Forma shows on the workout's detail. **Sleep** is read
+  only if you separately turn on *Sleep in your weekly review*, and only as a weekly average — no
+  nightly sleep data is stored.
 - **Writes from Forma to Apple Health**: entries you logged in Forma yourself — weigh-ins,
   body-fat entries, meals, water, and blood pressure. Values Forma computes (such as the fat-loss
   projection or AI insights) are **never** written to Apple Health.
@@ -112,28 +116,47 @@ We do **not** use your data to build advertising profiles, and we do **not** sel
 
 ## 4. AI features (important disclosure)
 
-Forma includes an optional AI "coach" that summarizes your trends and answers questions you ask.
-When you use it (or when a weekly insight is generated for you):
+Forma includes an optional AI "coach" that writes a weekly review of your trends, narrates the
+workouts you save, and answers questions you ask. **The coach is off until you turn it on** — in the
+app under *Account*, or from the *Coach tools* screen — and you can turn it off in the same places
+at any time. While it is off, nothing is sent to Anthropic for coaching: no weekly review is
+generated for you and your saved workouts are not narrated. The date you turned it on is recorded in
+your account as your consent record.
 
-- We send a **28-day summary of your data** — computed as aggregates, not your raw entries — to our
-  AI provider, **Anthropic** (the Claude API), to generate the response. These aggregates can
-  include summarized figures such as your average and change in body weight, average resting heart
-  rate, **average blood pressure**, workout counts, average calories and protein, water intake, and
-  the goals statement you wrote.
+When the coach is on:
+
+- Each week, and whenever you ask for an analysis or type a question, we send a **28-day summary of
+  your data** — computed as aggregates, not your raw entries — to our AI provider, **Anthropic** (the
+  Claude API), to generate the text. The summary can include: your average and change in body
+  weight; workout counts and per-lift top-set progression; average calories, protein, and water
+  against your targets; planned-versus-logged meal adherence; the change between your last two
+  tape checkpoints (never the measurements themselves); and the goals statement you wrote. If you
+  have connected a health store, it can also include your **average resting heart rate**, **average
+  blood pressure**, the count and minutes of outside workouts by type, your training-load ratios
+  against your own norm, and — only if you also turned on sleep in your weekly review — your weekly
+  sleep average.
+- When you **save a workout**, the coach narrates it from a short list of findings the app already
+  computed (for example "top set up from last session"), never from your raw sets.
 - If you **ask the AI a question**, the text of your question is also sent to Anthropic, and the
   feature may run a web search to answer it.
+- The AI-generated text is stored in your account alongside the data summary it was based on. You
+  can delete any of it from the *Coach tools* screen; turning the coach off does not delete reviews
+  already written.
+
+Two other features use Anthropic and run only when you take the specific action, whether or not the
+coach is on:
+
 - If you **photograph a meal** to log it, the photo is sent to Anthropic only to identify the foods
   on the plate; it is not stored, and the nutrition numbers come from the food databases, not from
   the AI.
 - If you use **Look it up** for a restaurant or branded item, the food name you typed is sent to
   Anthropic to find a page that publishes its nutrition facts; our servers then fetch that public
   page and read the figures from it. The page's address is recorded with the result.
-- The AI-generated insight is stored in your account alongside the data summary it was based on.
 
-Anthropic processes this data as our service provider to return the insight. Anthropic's handling of
-API data is governed by its own terms; see Anthropic's privacy policy. The AI does not provide
-medical advice, and its output can be incomplete or wrong — see the Terms of Service health
-disclaimer. You can simply not use the AI features if you prefer they never run.
+Anthropic processes this data as our service provider, on our instructions, to return the text.
+Anthropic's handling of API data is governed by its own terms; see Anthropic's privacy policy. The
+AI does not provide medical advice, and its output can be incomplete or wrong — see the Terms of
+Service health disclaimer.
 
 ## 5. How we share your information
 
