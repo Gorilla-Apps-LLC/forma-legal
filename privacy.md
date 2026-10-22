@@ -23,7 +23,7 @@ third-party analytics or tracking SDKs.
 
 | | |
 |---|---|
-| **What we collect** | Only what you enter or choose to sync: workouts, nutrition, body metrics, blood pressure, resting heart rate, lab results, progress photos, and your account email. |
+| **What we collect** | What you enter or choose to sync: workouts, nutrition, body metrics, blood pressure, resting heart rate, lab results, progress photos, and your account email — plus first-party usage events (which features you use, not what you logged) kept in our own database. |
 | **Why** | To provide the app's features to you — logging, trends, reminders, and optional AI insights. |
 | **Who we share it with** | A small set of infrastructure providers that run the app (database/hosting, AI insights, food lookups, push delivery). Listed in full below. |
 | **What we never do** | Sell your data. Show you ads. Use third-party advertising or analytics trackers. |
@@ -102,6 +102,10 @@ We use your information only to provide and operate the Service:
 - To look up foods and barcodes you search for.
 - To generate the optional AI insights you request (see *AI features* below).
 - To send the reminders you enable.
+- To understand which features are used. Forma records **first-party usage events** — for example
+  "meal logged" or "coach viewed," with the kind of action and a timestamp, never the content of
+  what you logged — in our own database, to improve the app. No third-party analytics service
+  receives them. They are deleted with your account.
 - To secure the Service, prevent abuse, and comply with law.
 
 We do **not** use your data to build advertising profiles, and we do **not** sell or rent it.
