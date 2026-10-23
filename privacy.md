@@ -36,7 +36,7 @@ This summary is for convenience; the full policy below governs.
 ## 1. Who we are
 
 Forma is operated by Gorilla Apps LLC. For any privacy question or request, contact us at
-**support@gorillaapps.com**.
+**info@gorillaapps.ai**.
 
 ## 2. Information we collect
 
@@ -213,7 +213,7 @@ ordinary course.
 - **Correction** — you can edit or remove individual entries directly in the app.
 
 Depending on where you live, you may have additional rights (such as under GDPR or the CCPA). To
-exercise any right, contact **support@gorillaapps.com**.
+exercise any right, contact **info@gorillaapps.ai**.
 
 ## 10. Children's privacy
 
@@ -235,4 +235,4 @@ revised policy.
 
 ## 13. Contact
 
-Questions or requests: **support@gorillaapps.com**.
+Questions or requests: **info@gorillaapps.ai**.

@@ -36,7 +36,7 @@ for children.
   account.
 - You are responsible for the accuracy of the information you enter and for all activity under your
   account.
-- Notify us at support@gorillaapps.com if you believe your account has been accessed without your
+- Notify us at info@gorillaapps.ai if you believe your account has been accessed without your
   authorization.
 
 ## 4. License to use the Service
@@ -156,4 +156,4 @@ to other binding resolution, to the extent permitted by law.
 
 ## 16. Contact
 
-Questions about these Terms: **support@gorillaapps.com**.
+Questions about these Terms: **info@gorillaapps.ai**.
