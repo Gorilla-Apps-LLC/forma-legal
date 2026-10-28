@@ -7,7 +7,7 @@ permalink: /privacy/
 # Forma — Privacy Policy
 
 **Effective date:** October 22, 2026
-**Last updated:** October 22, 2026
+**Last updated:** October 28, 2026
 
 Forma ("Forma," "we," "us," or "our"), provided by Gorilla Apps LLC, is a personal workout and
 nutrition tracking app. This policy explains what data Forma collects, how it is used and stored,
@@ -48,14 +48,22 @@ and can be turned off at any time on the Apple Health card in the app.
 ### 2.1 Account information
 - **Email address**, used to create and sign in to your account. Forma uses passwordless sign-in
   (a one-time link or code sent to your email); we do not store a password for you.
-- Optional profile settings you configure: your goals statement, macro/calorie targets, water
-  target, unit preferences, and timezone.
+- Optional profile settings you configure: a note to the coach (your goals statement); your daily
+  calorie and macro targets, with the date you set them and whether they came from a program you
+  picked (each change is kept as a dated history so you and the coach can tell which numbers were
+  yours); your stated goal (cut, maintain, build, or recomp) as a dated history — you can withdraw
+  it, which deletes that history; your training setup (equipment, days per week, session length,
+  experience, and what you train for), stored only as fixed choices, never free text; water target,
+  unit preferences, and timezone.
 
 ### 2.2 Health and fitness data you enter
 This is the core of the app and consists of information you log yourself:
 - **Workouts** — exercises, sets, reps, weights, session history, programs, and workout notes.
 - **Nutrition** — logged meals and their calories/macros, and water intake.
-- **Body metrics** — body weight, body-fat percentage, and body (tape) measurements.
+- **Body metrics** — body weight, height, body-fat percentage, and body (tape) measurements. If
+  you use the tape-based body-fat estimate, the protocol you choose for it (the formula is
+  sex-specific) is stored with your settings; the estimate itself is computed on your device and
+  only the result you choose to log is kept.
 - **Vitals** — blood pressure readings and resting heart rate.
 - **Lab results** — values you record from health panels.
 - **Progress photos** — images you choose to upload to track visual change over time.
@@ -129,8 +137,10 @@ When the coach is on:
   your data** — computed as aggregates, not your raw entries — to our AI provider, **Anthropic** (the
   Claude API), to generate the text. The summary can include: your average and change in body
   weight; workout counts and per-lift top-set progression; average calories, protein, and water
-  against your targets; planned-versus-logged meal adherence; the change between your last two
-  tape checkpoints (never the measurements themselves); and the goals statement you wrote. If you
+  against your daily targets — only the targets you set yourself or kept from a program as yours,
+  never the app's placeholder, and only the fields you set; planned-versus-logged meal adherence;
+  the change between your last two tape checkpoints (never the measurements themselves); your
+  stated goal and the date you stated it; and the note you wrote to the coach. If you
   have connected a health store, it can also include your **average resting heart rate**, **average
   blood pressure**, the count and minutes of outside workouts by type, your training-load ratios
   against your own norm, and — only if you also turned on sleep in your weekly review — your weekly
@@ -152,6 +162,10 @@ coach is on:
 - If you use **Look it up** for a restaurant or branded item, the food name you typed is sent to
   Anthropic to find a page that publishes its nutrition facts; our servers then fetch that public
   page and read the figures from it. The page's address is recorded with the result.
+- If you **bring in a routine you already have** (a photo of a page, a screenshot of another app,
+  or text you paste), that photo or text is sent to Anthropic only to read the exercises, sets,
+  reps, and loads out of it. The photo and the pasted text are not stored; what you confirm on the
+  read-back screen is saved as your program, including the exercise names as you wrote them.
 
 Anthropic processes this data as our service provider, on our instructions, to return the text.
 Anthropic's handling of API data is governed by its own terms; see Anthropic's privacy policy. The
@@ -166,7 +180,7 @@ required to run Forma, each limited to what its function needs:
 | Provider | Purpose | What it receives |
 |---|---|---|
 | **Supabase** (database, authentication, file storage; hosted on cloud infrastructure) | Stores your account and all your data, including progress photos | Your account email and all data you enter |
-| **Anthropic** (Claude API) | Generates the optional AI insights you request; identifies foods in a meal photo; finds a nutrition page for a food you look up | The 28-day data summary described in §4, any question text you submit, a meal photo you choose to analyze (not stored), or the food name you look up |
+| **Anthropic** (Claude API) | Generates the optional AI insights you request; identifies foods in a meal photo; finds a nutrition page for a food you look up; reads a routine you bring in | The 28-day data summary described in §4, any question text you submit, a meal photo you choose to analyze (not stored), the food name you look up, or the routine photo or text you choose to bring in (not stored) |
 | **USDA FoodData Central** and **Open Food Facts** | Food and barcode lookups | The search term or barcode you enter — **not** your identity or account data |
 | **Apple Push Notification service, Google/Firebase Cloud Messaging, and Expo push service; Web Push (browsers)** | Delivering the reminders you enable | A device push token and the reminder message |
 | **Apple App Store / Google Play** | App distribution and any future in-app purchases | Governed by Apple's and Google's own policies |
